@@ -1,0 +1,92 @@
+.skills {
+    margin-top: 120px;
+    padding-left: 10px;
+    padding-right: 10px;
+    &__title {
+        text-align: center;
+        position: relative;
+        @include before_circle;
+        &:before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__subtitle {
+        text-align: center;
+    }
+    &__wrapper {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        grid-template-rows: repeat(2, 270px);
+        gap: 13px;
+    }
+    &__item {
+        padding: 30px 30px 25px 30px;
+        border: 1px solid $main-color;
+        &:hover{    
+            filter: drop-shadow(16px 16px 20px $main-color);
+        }   
+        &-title{
+            margin-top: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 21px;
+        }
+        &-text{
+            margin-top: 15px;
+            font-size: 12px;
+            line-height: 18px;
+        }
+        &-img {
+            height: 65px;
+        }
+    }
+    &__bot{
+        padding-top: 135px;
+        &-wrapper{
+            display: grid;
+            grid-template-columns: repeat(3, 350px);
+            grid-template-rows: repeat(2, 70px);
+            column-gap: 45px;
+            row-gap: 30px;
+        }
+        &-item{
+            display: grid;
+            grid-template-columns: 200px 40px;
+            grid-template-rows: repeat(2, 35px);
+            justify-content: space-between;
+            align-content: space-between;
+            column-gap: 10px;
+            &-descr{
+                margin-left: 14px;
+                position: relative;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 21px;
+                @include before_circle;
+                &:before{
+                    left: -14px;
+                    top: -8px;
+                }
+            }
+            &-percent {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 21px;
+                
+            }
+            &-gray {
+                margin-top: 10px;
+                width: 350px;
+                height: 14px;
+                border-radius: 4px;
+                background: #E8E4DE;
+            }
+            &-color{
+                height: 100%;
+                background-color: $main-color;
+            }
+        }
+    }
+}
